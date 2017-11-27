@@ -55,6 +55,29 @@ namespace Csharp__Intro_Excercises_Section_5
             }
 
             //4.
+            Console.WriteLine("What is the speed limit?");
+            var speedLimit = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("And your car speed?");
+            var carSpeed = Convert.ToInt32(Console.ReadLine());
+            int demerits;
+
+            if (speedLimit > carSpeed)
+            {
+                Console.WriteLine("Ok");
+            }
+            else
+            {
+                demerits = (carSpeed - speedLimit) / 5;
+                if (demerits < 12)
+                {
+                    Console.WriteLine("{0} demerit points on your license", demerits);
+                }
+                else
+                {
+                    Console.WriteLine("License Suspended");
+                }
+            }
+
         }
     }
 }
